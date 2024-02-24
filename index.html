@@ -4,15 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Управление шаговым двигателем</title>
-  <style>
-    button {
-      display: block;
-      margin: 10px;
-      padding: 10px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
 </head>
 <body>
   <h1>Управление шаговым двигателем</h1>
@@ -21,11 +12,15 @@
 
   <script>
     function moveForward() {
-      fetch('/forward');
+      fetch('/forward')
+        .then(response => console.log(response))
+        .catch(error => console.error(error));
     }
 
     function moveBackward() {
-      fetch('/backward');
+      fetch('/backward')
+        .then(response => console.log(response))
+        .catch(error => console.error(error));
     }
   </script>
 </body>
